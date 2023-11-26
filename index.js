@@ -1,11 +1,21 @@
 const http = require('http');
+const express = require('express');
 
-const requestListener = (req, res) => {
-  res.statusCode = 200;
-  res.end('Hello from server');
-};
+const app = express();
 
-const server = http.createServer(requestListener);
+// GET /
+app.get('/', (req, res) => {
+  res.status(200).send('Hello from app');
+});
+
+// GET /users
+app.get('/users', (req, res) => {
+  const user = { name: 'Test' };
+  res.status(200).send(user);
+});
+
+// app - handler for createServer
+const server = http.createServer(app);
 
 server.listen(5000, () => {
   console.log(`Server is listening port 5000`);
