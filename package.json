@@ -1,0 +1,16 @@
+{
+  "name": "first-express-app",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "start": "node .",
+    "start-dev": "nodemon ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
